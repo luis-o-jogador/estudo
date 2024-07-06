@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minisena</title>
+    <link rel="stylesheet" href="/Styles.css">
+    <script defer src="/Login.js"></script>
+</head>
+<body>
+    <form class="login_form" action="/auth/signup" method="post">
+        <div class="login_header">
+            <h1>Inscrever</h1>
+        </div>
+        
+        <form id="registerForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" class="login_input">
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password">
+            
+            <label for="confirmPassword">Confirme a senha:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword">
+            <spam>Todas as senhas são criptografadas</spam>
+            
+            <button type="submit" class="login_button" disabled>Perder dinheiro</button>
+        </form>
+        <div>
+            <p>Possui uma conta? <a href="login">Logar-se</a></p>
+        </div>
+    </form>
+    
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minisena</title>
+    <link rel="stylesheet" href="/Menu.css">
+    <script defer src="/Menu.js"></script>
+</head>
+<body>
+    <header>
+        <% if (userName && userAccount) { %>
+            <h1>Bem-vindo, <%= userName %>!</h1>
+            <p>Conta: <%= userAccount %></p>
+        <% } else { %>
+            <h1>Bem-vindo!</h1>
+            <p>Por favor, faça login para ver seu nome e conta.</p>
+        <% } %>
+    </header>
+    <div id="leaderboard-placeholder"></div>
+    <form class="login_form">
+        <p><a href="/auth/login">Logar-se</a></p>
+        <div class="login_header">
+            <h1>Mini sena</h1>
+                
+        </div>
+        
+        <input type="text" placeholder="nome" class="login_input">
+        <button type="submit" class="login_button" disabled>Perder dinheiro</button>
+        <a href="game"><img src="/images/três-trevo-das-folhas-8357524.jpg" alt="Flowers in Chania"  class="game_input"></a>
+        
+    </form>
+
+    <h1>Leaderboard</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Posição</th>
+                <th>Nome</th>
+                <th>Conta</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% users.forEach((userAll, index) => { %>
+                <tr>
+                    <td><%= index + 1 %></td>
+                    <td><%= userAll.name %></td>
+                    <td><%= userAll.conta %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
